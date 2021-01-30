@@ -21,7 +21,10 @@ app.post("/validate-rule", (req, res) => {
         return res.status(400).send("Rule and Data fields are required");
     }
 
-    
+    // Write store response inside array
+    dataArray.push({rule, data})
+    res.send({rule, data})
+
 })
 
 
